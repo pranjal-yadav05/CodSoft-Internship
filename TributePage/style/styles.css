@@ -1,0 +1,324 @@
+/* Reset and Base Styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* Content padding */
+.container {
+    padding: 20px 40px; /* Added padding to the sides */
+}
+/* Navbar */
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 8px 0; /* Adjusted padding for a thinner navbar */
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px; /* Adjusted logo height */
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffc107; /* Updated color on hover */
+}
+
+.nav-links a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Adjust spacing between logo and "Einstein Tribute" */
+.logo h1 {
+    margin-left: 10px;
+}
+
+/* Hero */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.hero-title {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Anton', sans-serif;
+    color: #ffc107;
+    transition: transform 0.3s ease;
+}
+
+.hero-title:hover {
+    transform: scale(1.05);
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    color: #bbb;
+    transition: transform 0.3s ease;
+}
+
+.hero-subtitle:hover {
+    transform: rotate(-3deg);
+}
+
+/* Sections */
+.section {
+    padding: 20px 0;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Quotes */
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+blockquote:before {
+    content: "“";
+    position: absolute;
+    font-size: 36px;
+    left: -10px;
+    top: -5px;
+    color: var(--primary-color);
+}
+
+blockquote:hover {
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+.einstein {
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto; /* Center horizontally with top and bottom margin */
+}
+
+/* Back to Top button */
+.back-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(20px);
+}
+
+.back-to-top-button:hover {
+    opacity: 1;
+    transform: translateY(0) scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.read-more-toggle {
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.read-more-toggle:hover {
+    color: var(--accent-color);
+}
+
+.read-more-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.read-more-content.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 40px;
+}
+
+/* Add space between the elements within read-more-content */
+.read-more-content p {
+    margin-bottom: 10px;
+}
+
+/* Add border between sections within read-more-content */
+.read-more-content h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+:root {
+    --primary-color: #ff8000; /* Orange */
+    --secondary-color: #0d47a1; /* Blue */
+    --accent-color: #757575; /* Gray */
+}
+
+.content{
+    padding: 0 20px;
+}
+
+/* Styles for the achievements list */
+.achievements-list {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.achievements-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+.achievements-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.achievements-list li:hover::before {
+    transform: translateY(-50%) scale(2);
+    background-color: var(--accent-color);
+}
+
+/* Adjusted styles for the gallery */
+.gallery-container {
+    width: 20%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-images {
+    display: flex;
+    width: 20%;
+    height: 150px; /* Set a fixed height for the container */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img {
+    flex: 0 0 20%; /* Set a fixed width of 20% */
+    width: 20vw; /* Set width to 20% of the container */
+    height: 20vh; /* Set height to 20% of the container */
+    object-fit: contain; /* Show the full image without cropping */
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-image {
+    flex: 0 0 20%; /* Set a fixed width of 20% */
+    width: 20%; /* Set width to 20% of the container */
+    height: 20%; /* Set height to 20% of the container */
+    object-fit: contain; /* Show the full image without cropping */
+    transition: transform 0.3s ease;
+}

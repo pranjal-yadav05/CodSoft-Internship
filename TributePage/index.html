@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <title>Albert Einstein Tribute</title>
+</head>
+<body>
+    <button id="backToTopBtn" class="back-to-top-button">Back to Top</button>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img class="einstein" src="images/albert-einstein-1100449_1920.png" height="50px" alt="Einstein Logo">
+                <h1>Einstein Tribute</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#theories">Theories</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="hero" style="background-image: url(board_empty.jpg);">
+        <div class="container">
+            <h1 class="hero-title">Albert Einstein</h1>
+            <p class="hero-subtitle">Revolutionary Physicist</p>
+        </div>
+    </header>
+    <div class="content" draggable="true">
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Albert Einstein</h2>
+                <p>
+                    Albert Einstein, born on March 14, 1879, in Ulm, Germany, was a German-born theoretical physicist and one of the most influential scientists of all time.
+                </p>
+                <p>
+                    He is best known for his groundbreaking theory of relativity, which fundamentally changed our understanding of space, time, and gravity.
+                </p>
+            </div>
+        </section>
+
+        <section id="theories" class="section">
+            <div class="container">
+                <h2>Einstein's Theories</h2>
+                <p>
+                    Einstein's special theory of relativity, introduced in 1905, showed that time and space are interconnected and that the speed of light is the universal constant.
+                </p>
+                <p>
+                    His general theory of relativity, presented in 1915, proposed that gravity arises from the curvature of spacetime caused by mass and energy.
+                </p>
+            </div>
+        </section>
+
+        <section id="quotes" class="section">
+            <div class="container">
+                <h2>Notable Quotes</h2>
+                <blockquote>
+                    "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution."
+                </blockquote>
+                <blockquote>
+                    "The only source of knowledge is experience."
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="achievements" class="section">
+            <div class="container">
+                <h2>Achievements and Contributions</h2>
+                <p>Albert Einstein's groundbreaking work in theoretical physics revolutionized our understanding of the universe. Here are some of his most notable achievements:</p>
+                <ul class="achievements-list">
+                    <li class="fade-in">Formulated the theory of relativity, including the famous equation E=mc²</li>
+                    <li class="fade-in">Received the Nobel Prize in Physics for his discovery of the photoelectric effect</li>
+                    <li class="fade-in">Developed the theory of Brownian motion, providing evidence for the existence of atoms</li>
+                    <li class="fade-in">Pioneered the concept of the cosmological constant in his theories</li>
+                </ul>
+                
+            </div>
+        </section>
+        
+        
+        
+        <!-- New Page: Gallery -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <img class="slideshow-image" src="1.jpg" alt="Image 1">
+                        <img class="slideshow-image" src="2.jpg" alt="Image 2">
+                        <img class="slideshow-image" src="3.jpg" alt="Image 3">
+                        <img class="slideshow-image" src="4.jpg" alt="Image 4">
+                        <img class="slideshow-image" src="yng.jpg" alt="Young Einstein">
+                        <img class="slideshow-image" src="relativity.jpg" alt="Relativity">
+                        <img class="slideshow-image" src="6.jpg" alt="Image 6">
+                    </div>
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </section>
+        <script>
+            const slideshow = document.querySelector('.slideshow');
+            const images = slideshow.querySelectorAll('.slideshow-image');
+            const prevButton = document.querySelector('.prev-button');
+            const nextButton = document.querySelector('.next-button');
+            
+            let currentIndex = 0;
+            
+            function showImage(index) {
+                images.forEach((image, i) => {
+                    if (i === index) {
+                        image.style.display = 'block';
+                    } else {
+                        image.style.display = 'none';
+                    }
+                });
+            }
+            
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }
+            
+            function showPrevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            }
+            
+            prevButton.addEventListener('click', showPrevImage);
+            nextButton.addEventListener('click', showNextImage);
+            
+            showImage(currentIndex);
+        </script>
+        
+
+        <section class="section">
+            <div class="container">
+                <h2>Legacy and Influence</h2>
+                <p>Learn about how Einstein's ideas continue to shape modern physics and influence various fields of science and culture.</p>
+                <p class="read-more-toggle">Read More</p>
+                <div class="read-more-content">
+                    <p><strong>Influence on Quantum Mechanics:</strong> Einstein's skepticism about certain aspects of quantum mechanics sparked debates with other physicists. He famously said, "God does not play dice with the universe," reflecting his doubts about the randomness inherent in quantum theory.</p>
+                    <p><strong>Unified Field Theory:</strong> Einstein spent much of his life searching for a unified theory that could explain all fundamental forces in a single framework. While he didn't achieve this goal, his pursuit inspired generations of physicists to explore the connections between forces.</p>
+                    <p><strong>Impact on Cosmology:</strong> Einstein's general relativity played a pivotal role in the development of modern cosmology. His equations were key to understanding the expansion of the universe and the Big Bang theory, which describes the universe's origin.</p>
+                    <p><strong>Cultural Impact:</strong> Beyond science, Einstein became a cultural icon known for his wild hair, warm smile, and deep insights. He used his platform to advocate for pacifism, civil rights, and social justice, leaving a lasting legacy beyond the lab.</p>
+                    <p><strong>Continued Relevance:</strong> Einstein's theories continue to guide research in theoretical physics, including the search for a theory of everything. His work continues to inspire new generations of scientists and thinkers worldwide.</p>
+                </div>
+                
+            </div>
+        </section>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Einstein Tribute</p>
+        </div>
+    </footer>
+</body>
+</html>

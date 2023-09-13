@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
+body,html{
+    width:100vw;
+    height: fit-content;
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    background-image: url("background.jpg");
+    background-size: cover;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-image: linear-gradient(rgb(43, 43, 155), rgb(168, 30, 30));
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-100%);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header:hover {
+    background-image: linear-gradient(rgb(53, 53, 175), rgb(188, 40, 40)); 
+    transform: translateY(-5px) scale(1.02); 
+}
+
+.header:hover:after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.result-card {
+    background-color: #fffef8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.result-card h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.result-card .details {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.result-card .mode {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.container .result-card:last-child {
+    margin-bottom: 0;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding:5px;
+    margin-top: 20px; 
+}
+.more-content {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.more-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.more-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.more-content ul {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.more-content li {
+    margin-bottom: 10px;
+}
+.more-content:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.result-card {
+    margin-bottom: 20px;
+}
