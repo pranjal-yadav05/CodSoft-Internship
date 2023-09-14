@@ -4,7 +4,7 @@ Welcome to the repository for my virtual internship projects with CodSoft! This 
 
 ## OasisTravel
 
-**Project Description:** OasisTravel is a Travel Booking website developed as part of my internship with CodSoft. This project aimed to create a user-friendly platform that allows users to search for, book, and manage their travel arrangements. The website offers a seamless experience for travelers to plan their journeys, including booking flights, hotels, and rental cars.
+**Project Description:** OasisTravel is a Travel Booking website developed as part of my internship with CodSoft. This project aimed to create a user-friendly platform that allows users to search for, book, and manage their travel arrangements. The website offers a seamless experience for travelers to plan their journeys, including booking flights, buses and trains.
 
 **Features:**
 - Flight Booking: Search for and book flights to various destinations.
@@ -21,7 +21,8 @@ Welcome to the repository for my virtual internship projects with CodSoft! This 
 **How to Run:**
 1. Clone this repository to your local machine.
 2. Navigate to the "OasisTravel" directory.
-3. Open the `index.html` file in your web browser to explore the website.
+3. Use a Apache server to run this directory in your web browser.
+4. Create a SQL database of your own on regarding the buses, trains and flights as you wish.
 
 Feel free to explore the code and provide feedback or suggestions for improvement.
 
